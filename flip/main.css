@@ -5,9 +5,11 @@ body,html{
     padding:0;
 
 }
+
+  /*change*/
 .main{
 
-  background-color:#039BE5;
+  background-color:grey;
   box-sizing: border-box;
   display: flex; /* or inline-flex */
   flex-wrap: wrap;
