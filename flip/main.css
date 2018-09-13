@@ -1,0 +1,67 @@
+
+body,html{
+
+  margin:0;
+    padding:0;
+
+}
+.main{
+
+  background-color:#039BE5;
+  box-sizing: border-box;
+  display: flex; /* or inline-flex */
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.flip-container,.flipper{
+	perspective: 1000px;/*smaller the perspective more 3d but here flat so large perspective*/
+  width: 100%;
+
+
+ }
+	/* flip the pane when hovered */
+	.flipper:hover {
+		transform: rotateX(180deg); /*rotate when hovered*/
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 2s;/*time taken in transition*/
+	transform-style: preserve-3d; /*for 3d it should be preserve3d*/
+	transform-origin: 100% 240px; /*origin of transformation*/
+	position: relative;
+
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden; /*should be hidden else it shows mirror at back of text in front*/
+	position: absolute;
+  border: white;
+  border-style: solid;
+
+}
+
+/* front pane, placed above back */
+.front {
+/*	z-index: 2;*/
+	/* for firefox 31 */
+	transform: rotateX(0deg); /*inital front*/
+  background-color: black;
+  color: white;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);/*back is in behind initially so 180*/
+  background-color: black;
+  color: white;
+}
