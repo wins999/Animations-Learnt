@@ -1,0 +1,70 @@
+article {
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50px,
+        #fdef67 50px,
+        #fdef67 calc(100% - 50px),
+        transparent 0
+    );
+    margin: auto auto 50px auto;
+}
+.category,
+.title,
+.footer {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 50px;
+}
+.category {
+    top: 0;
+    font: 35px/57px "Lobster";
+    color: #f83d23;
+
+}
+.title {
+    top: 0;
+    font-size: 50px/60px
+    font-family:"'Abril Fatface', cursive";
+    color: #fdef67;
+    background-color: dodgerblue;
+    margin: 0;
+}
+.footer {
+    bottom: 100px;
+    z-index: -1;
+    color: white;
+
+    background-color: #f83d23;
+    width: 80%;
+    margin: 50px auto auto auto;
+}
+body {
+font-family: 'Open Sans', sans-serif;
+}
+p {
+    margin: 10px;
+}
+.emptyBlocks {
+    background-color: #ccc;
+    height: 200px;
+    margin: 40px auto;
+}
+article,
+.emptyBlocks {
+    width: 80vw;
+    max-width: 420px;
+}
+@media (max-width: 420px) {
+    .category {
+        font: 24px/72px "Lobster";
+        text-align: center;
+    }
+    .footer {
+        font-size: 9pt;
+    }
+}
+@media (max-height: 946px){
+    .tallScreenText{
+        display: none;
+    }
+}
